@@ -16,10 +16,12 @@ The pattern `x :: r -> x + accum r` breaks down:
 * `->` processes as
 * `x + accum r` adds x and the accumulation of the rest of the list
 
+```
     let rec accum lst = 
       match lst with
       | x :: r -> x + accum r
       | [] -> 0
+```
 
 This code alls `accum` on a list called `lst`
 
